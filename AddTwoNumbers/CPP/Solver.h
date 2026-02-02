@@ -3,13 +3,13 @@ class Solver
     public:
         Solver (long op1, long op2) : m_op1(op1), m_op2(op2) {}
 
-        ListNode * solve();
+        std::unique_ptr<ListNode> solve();
 
-        ListNode * toListNode(long value);
+        std::unique_ptr<ListNode> toListNode(long value);
 
         long toLong (const ListNode * pNode);
 
-        ListNode * addTwoNumbers(ListNode * pList1, ListNode * pList2);
+        std::unique_ptr<ListNode> addTwoNumbers(const ListNode* pList1, const ListNode* pList2);
 
     private:
         long m_op1 = 0;
