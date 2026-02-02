@@ -18,8 +18,8 @@ int main(int argc, char *argv[])
         std::cin >> val2;
 
         Solver solver(val1, val2);
-        ListNode * pHead = solver.solve();
-        long total = solver.toLong(pHead);
+        std::unique_ptr<ListNode> pHead = solver.solve();
+        long total = solver.toLong(pHead.get());
         std::cout << "Total: " << total << std::endl;
     }
 
